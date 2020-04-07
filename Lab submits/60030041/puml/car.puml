@@ -30,11 +30,12 @@ class Pistond{
 -Transfer power()
 }
 class SpearkPlugs{
+-Brand
 -spark ignition()
 }
 class Radio{
 +Audio
-+AM/FM()
++Button change AM/FM()
 }
 class Cassette{
 +Audio
@@ -46,8 +47,8 @@ class Handle{
 +Open the dooor()
 +Close the door()
 }
-object Tuner{
-
+class Tuner{
++Button change radio
 -Change Radio station()
 }
 
@@ -59,7 +60,7 @@ Engine o-- "1...4"SpearkPlugs
 Stereo o--  "1...1"Radio
 Stereo o-- "1...1"Cassette
 Door o-- "1...4"Handle
-Radio o-- Tuner
+Radio o-- "1..n"Tuner
 
 
 @enduml
