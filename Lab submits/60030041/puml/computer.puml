@@ -1,0 +1,47 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+class Computer{
+    + Brand logo
+    + color
+    - PowerSupply
+    + Mouse()
+    + Printer()
+    + Scanner()
+    + Keyboard)
+}
+class Monitor{
+Button switch
++ Display()
+}
+class Mouse{
+ +color
+ - Button switch
+ + Brand logo
+ + Right click()
+ + Left click()
+ + Wheeling()
+}
+class Printer{
++Brand logo
++Print paper()
+}
+class Scanner{
++Clolor
++Button switch
++Scan paper()
+}
+class Keyboard{
++Button text
++Button number
++Brand logo
++Change symbols()
++ChangeLanguage()
++Key up
+}
+Computer -- "1..."Monitor :connect
+Computer -- "1...1"Mouse :connect
+Computer -- "1...1"Printer :connect
+Computer -- "1...1"Scanner :connect
+Computer -- "1...1"Keyboard :connect
+@enduml
