@@ -1,0 +1,65 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+class car{
+   + Body
+   + Wheels
+   + Brand
+   - Engine()
+   - Stereo()
+   + Door()
+}
+class Engine{
++ RB26 DETT
+- Pistond()
+- SpearkPlugs()
+}
+class Stereo{
+ + slot input USB and CD/DVD
+ + Screen 
+ - Rradio()
+ - Cassette()
+}
+class Door{
++ Door left
++ Door righ
++ Bonnet
++ handle left()
++ handle righ()
++ handle bonnet()
+}
+class Pistond{
+- HKS NI PISTON 
+KIT RB26 87 S2
+}
+class SpearkPlugs{
+- SUPER SPARK COIL 
+PACKS - R34 RB25DET NOE
+}
+class Radio{
+- Audio
+}
+class Cassette{
+- mp3
+- mp3
+}
+class Handle{
++ Handle left
++ Handle eight
++ handle bonnet
+}
+class Tuner{
+- FM/AM
+}
+
+car o-- "1...1"Engine
+car o-- "1...1"Stereo
+car o-- "1...n"Door
+Engine o-- "1...1"Pistond
+Engine o-- "1...1"SpearkPlugs
+Stereo o--  "1...1"Radio
+Stereo o-- "1...1"Cassette
+Door o-- "1...n"Handle
+Radio o-- "1..n"Tuner
+
+@enduml
