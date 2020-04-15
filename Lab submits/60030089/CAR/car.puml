@@ -1,0 +1,83 @@
+@startuml CAR
+
+skinparam ClassAttributeIconSize 0 
+hide circle
+class CAR
+{
+    +ทะเบียน
+    -พรบ.
+    -ประกัน
+    -เบรก()
+    -ขับรถ()
+    +เปิด/ปิด ประตู()
+
+}
+class Door
+{
+    +กระจก
+    +ด้ามจับ
+    +เปิดประตู()
+    +ปิดประตู()
+    +เปิดกระจก() 
+    +ปิดกระจก()
+}
+class handle
+{
+    +เปิด/ปิด
+    -ล๊อก()
+    -ปลดล๊อก()
+}
+class Engine
+{
+    +pistons
+    +sparkPlugs
+}
+class pistons
+{
+    -สี่กระบอกสูบ
+    -ดูด()
+    -อัด()
+    -ระเบิด()
+    -คลาย()
+}
+class SpakePlugs
+{
+    -จุดประกายไฟ
+    -จุดประกายไฟ()
+    -ไม่จุดประกายไฟ()
+}
+class stereo
+{ 
+    +Radio
+    +Cassette
+    +Tuner
+    +เล่นเพลง()
+    +เพิ่มเสียง()
+    +ลดเสียง()
+}
+class Radio
+{
+    +รับสัญญาณวิทยุ
+    -เปลี่ยนคลื่นวิทยุ()
+}
+class Cassette
+{
+    +เปิดเพลงจากเทป
+    -เลือกเพลง()
+}
+class Tuner
+{
+    +เปิดใช้งาน
+}
+CAR o-- Door
+Door o-- handle
+CAR o-- Engine
+CAR o-- stereo
+Engine o-- pistons
+Engine o-- SpakePlugs
+Radio o-- Tuner
+stereo o-- Radio
+stereo o-- Cassette
+
+@enduml
+
