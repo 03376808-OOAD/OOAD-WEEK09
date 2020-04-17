@@ -69,19 +69,19 @@ class Tuner{
     + receiveSelectedFrequency()
 }
 
-Car o-- Engine
-Car o-- Stereo
-Car o-- Door
+Car o-- "1.. 1"Engine
+Car o-- "1.. 1"Stereo
+Car o-- "1.. n"Door
 
-Engine o-- Pistons
-Engine o-- SparkPlugs
+Engine o-- "1.. 1"Pistons
+Engine o-- "1.. 6"SparkPlugs
 
-Stereo o-- Radio
-Stereo o-- Cassette
+Stereo o-- "1.. 1"Radio
+Stereo o-- "1.. 1"Cassette
 
-Door o-- Handle
+Door o-- "1.. 1"Handle
 
-Radio o-- Tuner
+Radio o-- "1.. 1"Tuner
 
 @enduml
 
