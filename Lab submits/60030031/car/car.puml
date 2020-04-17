@@ -1,0 +1,60 @@
+@startuml
+
+skinparam ClassAttributeIconSize 0
+class Car{
+    +color
+    +Brand
+    -Engine
+    move()
+}
+class Engine{
+    -Piston
+    -Spark Plug
+}
+class Stereo{
+    -speaker
+    Adjust the volume()
+    play()
+}
+class Pistons{
+    -Metal type
+    -weight
+}
+class SparkPlugs{
+    -type
+    -insulator
+    Sparks()
+}
+class Radio{
+    play the radio()
+}
+class Cassette{
+    play playlist()
+}
+
+class Tuner{
+    Adjust the volume()
+
+}
+class Door{
+    +color
+    lock()
+    open()
+    close()
+    open glass()
+}
+class Handle{
+    +color
+
+}
+
+Car o-- Engine
+Car o-- Stereo
+Car o-- Door
+Engine o-- Pistons
+Engine o-- SparkPlugs
+Stereo o-- Radio
+Stereo o-- Cassette
+Radio o-- Tuner
+Door o-- Handle
+@enduml
