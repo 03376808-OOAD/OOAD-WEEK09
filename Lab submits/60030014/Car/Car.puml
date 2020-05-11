@@ -1,0 +1,89 @@
+@startuml car
+skinparam ClassAttributeIconSize 0
+class Car{
+	-registrationNum
+	-year 
+	-licenseNumber
+    +moveForward()
+    +moveBackward()
+    +stop()
+    +turnRight()
+    +turnLeft()
+}
+
+class Engine{
+    -capacity
+	-numberOfCylinders 
+    +start()
+    +break()
+	+accerate
+}
+
+class Stereo{
+    -Speaker
+    -VolumeLevel
+    +VolumeUp()
+    +VolumeDown()
+    +Play()
+    +Pause()
+	+Refresh
+	
+}
+
+class Door{
+    + Color
+    + Glass
+    + OpenGlass()
+    + CloseGlass()
+}
+
+class GearBox{
+    -gearRatio()
+    -currentGear()
+    +shiftUp()
+    +shiftDown()
+}
+
+class SparkPlugs{
+    - Heat Range
+    + Ignition()
+}
+
+class Radio{
+    - Demodulation
+    + ChangeFrequency()
+}
+
+class Cassette{
+    - ReadableCassette
+    + ReadCassette()
+}
+
+class Handle{
+    + Color
+    + Lock()
+    + Unlock()
+    + OpenDoor()
+    + CloseDoor()
+}
+
+class Tuner{
+    - ReceivableFrequency
+    + receiveSelectedFrequency()
+}
+
+Car o-- "1.. 1"Engine
+Car o-- "1.. 1"Stereo
+Car o-- "1.. n"Door
+
+Engine o-- "1.. 1"GearBox
+Engine o-- "1.. 6"SparkPlugs
+
+Stereo o-- "1.. 1"Radio
+Stereo o-- "1.. 1"Cassette
+
+Door o-- "1.. 1"Handle
+
+Radio o-- "1.. 1"Tuner
+
+@enduml
