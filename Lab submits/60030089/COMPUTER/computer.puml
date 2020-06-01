@@ -1,0 +1,62 @@
+@startuml computer
+skinparam ClassAttributeIconSize 0 
+hide circle
+class Computer
+{
+    +เปิด
+    +ปิด
+    +ยี่ห้อ
+    -รุ่น
+    +Mornitor()
+    +Mouse()
+    +Printer()
+    +Scanner()
+    +Keyboard()
+}
+class Mornitor
+{
+    +ยี่ห้อ
+    -รุ่น
+    +เปิดหน้าจอ
+    +ปิดหน้าจอ
+    -ความละเอียด()
+    
+}
+class Mouse
+{
+    +ยี่ห้อ
+    -รุ่น
+    +คลิ๊กขวา()
+    +คลิ๊กซ้าย()
+    +เลื่อนลูกเลื่อน()
+}
+class Printer
+{
+    +ยี่ห้อ
+    -รุ่น
+    +เปิดเครื่อง
+    +ปิดเครื่อง
+    +พิมพ์งาน()
+}
+class Scanner
+{
+    +ยี่ห้อ
+    -รุ่น
+    +เปิดเครื่อง
+    +ปิดเครื่อง
+    +สแกนงาน()
+}
+class Keyboard
+{
+    +ยี่ห้อ
+    -รุ่น
+    +เปิดเครื่อง
+    +ปิดเครื่อง
+    +พิมพ์งาน()
+}
+Computer -- Mornitor
+Computer -- Mouse
+Computer -- Printer
+Computer -- Scanner
+Computer -- Keyboard
+@enduml
