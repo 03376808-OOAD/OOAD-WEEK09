@@ -1,0 +1,48 @@
+@startuml
+
+skinparam ClassAttributeIconSize 0
+class Computer{
+    -CPU
+    +Monitor
+    +Printer
+    +Scanner
+    +Keyboard
+    Compute()
+}
+class Monitor{
+    +Size
+    -weight
+    +color
+    +Brand
+    Show screen()
+}
+class Mouse{
+    +Brand
+    -weight
+    +color
+    Move a cursor()
+}
+class Printer{
+    +Brand
+    +Size
+    -weight
+    prints onto paper()
+}
+class Scanner{
+    +Brand
+    +Color
+    +Size
+    Scan()
+}
+class Keyboard{
+    +color
+    +Size
+    -weight
+    put information into a computer()
+}
+Computer o-- Monitor
+Computer o-- Mouse
+Computer o-- Printer
+Computer o-- Scanner
+Computer o-- Keyboard
+@enduml
