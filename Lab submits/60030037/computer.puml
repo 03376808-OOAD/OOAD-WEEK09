@@ -1,0 +1,70 @@
+@startuml computer
+skinparam ClassAttributeIconSize 0
+Class Computer{
+    + Brand
+    - Model
+    + Color
+    - Storage
+    - CPU
+    - Mainboard
+    turnOn()
+    turnOff()
+    runProgram()
+}
+
+Class Monitor{
+    + Brand
+    + Color
+    - Resolution
+    - Ratio
+    + Screen
+    + Display()
+
+}
+
+Class Mouse{
+    + Brand
+    + Wire/Wireless
+    + Laser
+    + LED
+    + Scroller
+    - DPI
+    + Color
+    + Right Click()
+    + Left Click()
+    + Scroll()
+}
+
+Class Printer{
+    + Color
+    + Brand
+    + Ink
+    + Interface
+    - PrintHead
+    + printBlack&White()
+    + printColor()
+}
+
+Class Scanner{
+    - ScanHead
+    + Brand
+    + Color
+    + Scanning()
+}
+
+Class Keyboard{
+    + Brand
+    + Color
+    + Button
+    + KeyDown()
+    + KeyUp()
+}
+
+Computer -- "1.. n"Monitor
+Computer -- "1.. 1"Mouse
+Computer -- "0.. n"Printer
+Computer -- "0.. n"Scanner
+Computer -- "1.. 1"Keyboard
+
+@enduml
+
