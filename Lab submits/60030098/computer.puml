@@ -1,0 +1,46 @@
+@startuml
+class Computer{
+    +Case
+    +Moniter
+    +Mouse
+    +Printer
+    +Scanner
+    +Keyboard
+    Computing()
+    Documenting()
+    PlayGames()
+}
+class Moniter{
+    -LEDDisplay
+    +Frame
+    ShowDisplay()
+}
+class Mouse{
+    +USB
+    -Censor
+    -Buttons
+    InputData()
+}
+class Printer{
+    +Paper
+    +Ink
+    +PrinterCover
+    -PrintHead
+    PrintPaper()
+}
+class Scanner{
+    +ScannerCover
+    -ScannerHead
+    Scan()
+}
+class Keyboard{
+    +Buttons
+    +USB
+    InputData()
+}
+Computer o-- Moniter
+Computer o-- Mouse
+Computer o-- Printer
+Computer o-- Scanner
+Computer o-- Keyboard
+@enduml

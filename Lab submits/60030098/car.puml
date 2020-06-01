@@ -1,0 +1,74 @@
+@startuml
+class Car{
+    Travel()
+    +Seat
+    +Belt
+    +Handle
+    +Wheel
+    +Break
+    +Color
+    +Shape
+    +Door
+    -Engine
+    -Stereo
+}
+class Engine{
+    -Cylinders
+    -SparkPlug
+    -Valves
+    -Piston
+    -PistonRings
+    -Crankshaft
+    -ConnectingRod
+    -Sump
+    TurnsTheWheels()
+}
+class Stereo{
+    -Radio
+    -Amplifier
+    -Speaker
+    -Cassette
+    PlayMusic()
+}
+class Door{
+    -DoorHinge
+    -LockCylinder
+    +WindowCrank
+    +Moulding
+    +Handle
+    Open()
+    Lock()
+}
+class Pistons{
+    +AlluminiumAlloys
+    TransferForce()
+}
+class SparkPlugs{
+    +Shell
+    +CentralElectrode
+    SparkIgnition()
+}
+class Radio{
+    +Tuner
+    PlayCassette()
+}
+class Cassette{
+    -MagneticTape
+    RecordMusic()
+}
+class Handle{
+    Grab()
+}
+class Tuner{
+    Tune()
+}
+    Car o-- Engine
+    Car o-- Stereo
+    Car o-- Door
+    Engine o-- Pistons
+    Engine o-- SparkPlugs
+    Stereo o-- Radio
+    Stereo o-- Cassette
+    Radio o-- Tuner
+    Door o-- Handle
+@enduml
